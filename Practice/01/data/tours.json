@@ -1,0 +1,38 @@
+[
+ {
+  "id": 1,
+  "name": "Test Tour",
+  "duration": 10,
+  "dificulty": "easy"
+ },
+ {
+  "id": 2,
+  "name": "Test Tour",
+  "duration": 10,
+  "dificulty": "easy"
+ },
+ {
+  "id": 3,
+  "name": "Test Tour",
+  "duration": 10,
+  "dificulty": "easy"
+ },
+ {
+  "id": 4,
+  "name": "Test Tour",
+  "duration": 10,
+  "dificulty": "easy"
+ },
+ {
+  "id": 5,
+  "name": "Test Tour",
+  "duration": 10,
+  "dificulty": "easy"
+ },
+ {
+  "id": 6,
+  "name": "Test Tour",
+  "duration": 10,
+  "dificulty": "easy"
+ }
+]
