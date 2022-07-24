@@ -7,8 +7,14 @@ const userRouter = require('./routes/userRoutes')
 const app = express();
 
 // 1 MIDDLEWARES
-app.use(morgan('dev'))
+console.log(process.env.NODE_ENV)
+if (process.env.NODE_ENV === 'development') {
+ app.use(morgan('dev'))
+}
 app.use(express.json())
+
+console.log('hiny')
+
 
 app.use((req, res, next) => {
  console.log('Hello from the middleware')
@@ -16,6 +22,12 @@ app.use((req, res, next) => {
  next()
 })
 
+/* 
+
+    "no-unused-vars": ["error", {"vars": "all", "args": "after-used"}]
+
+
+*/
 app.use((req, res, next) => {
  req.requestTime = new Date().toISOString()
  next()
@@ -39,6 +51,15 @@ module.exports = app
 
 
 /* 
+
+
+ config webpack parsers
+
+npm i eslint prettier eslint-config-prettier
+eslint-plugin-prettier eslint-config-airbnb
+eslint-plugin-node eslint-plugin-import
+eslint-plugin-jsx-a11y eslint-plugin-react --save-dev
+   
 
 problema de capa 8 es un chiste
 capa de aplicacion
