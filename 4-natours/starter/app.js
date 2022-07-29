@@ -13,8 +13,6 @@ if (process.env.NODE_ENV === 'development') {
 }
 app.use(express.json());
 
-console.log('hiny');
-
 app.use((req, res, next) => {
   console.log('Hello from the middleware');
   /* NEVER FORGET NEXT */
