@@ -11,9 +11,13 @@ const router = express.Router();
 // app.patch('/api/v1/tours/:id', updateTour)
 // app.delete('/api/v1/tours/:id', deleteTour)
 
-router.param('id', tourController.checkId);
+// router.param('id', tourController.checkId);
 
-router.route('/').get(getAllTours).post(tourController.checkBody, createTour);
+router
+  .route('/')
+  .get(getAllTours)
+  .post(createTour);
+  // .post(tourController.checkBody, createTour);
 
 router.route('/:id').get(getTour).patch(updateTour).delete(deleteTour);
 
